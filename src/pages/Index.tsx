@@ -46,15 +46,15 @@ const Index = () => {
           }}
         />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             Soluções Inteligentes para Recursos Hídricos
           </h1>
-          <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl lg:text-2xl text-white mb-8 max-w-4xl mx-auto">
             Desenvolvemos soluções inovadoras para o monitoramento e gestão de recursos hídricos, 
             integrando tecnologia de ponta com expertise ambiental para garantir a sustentabilidade 
             e eficiência no setor elétrico brasileiro.
           </p>
-          <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-white mb-12 max-w-3xl mx-auto">
             Nossa missão é transformar a gestão de recursos hídricos através de tecnologia avançada 
             e conhecimento especializado, proporcionando soluções que garantam a sustentabilidade e 
             eficiência operacional no setor elétrico.
