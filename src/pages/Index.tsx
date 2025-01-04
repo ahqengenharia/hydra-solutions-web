@@ -64,7 +64,7 @@ const Index = () => {
             <Button 
               variant="outline"
               className="text-lg px-8 py-6 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300 w-64"
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => navigate('/software-recursos')}
             >
               <Database className="mr-2" />
               Softwares e Recursos
