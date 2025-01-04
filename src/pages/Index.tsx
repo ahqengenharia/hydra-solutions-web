@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Phone, MapPin } from "lucide-react";
@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Contact Info */}
-      <div className="absolute top-4 right-4 text-sm text-gray-600 text-right">
+      <div className="absolute top-4 right-4 text-sm text-gray-600 text-right z-20">
         <div className="flex items-center justify-end gap-2 mb-2">
           <Phone className="h-4 w-4" />
           <div>
@@ -28,7 +28,7 @@ const Index = () => {
       </div>
 
       {/* Logo */}
-      <div className="absolute top-4 left-4">
+      <div className="absolute top-4 left-4 z-20">
         <img 
           src="/lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
           alt="AHQ Logo" 
@@ -37,7 +37,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative h-screen flex items-center justify-center bg-white">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
           style={{
@@ -45,23 +45,23 @@ const Index = () => {
           }}
         />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-6xl font-bold text-gray-800 mb-6">
             Soluções Inteligentes para Recursos Hídricos
           </h1>
-          <p className="text-xl sm:text-2xl text-white mb-8">
+          <p className="text-xl sm:text-2xl text-gray-700 mb-8">
             Impulsionando a eficiência e a sustentabilidade no uso da água para o setor elétrico.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="secondary"
-              className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-gray-100"
+              className="text-lg px-8 py-6 bg-gray-800 text-white hover:bg-gray-700"
               onClick={() => window.location.href = '#sobre'}
             >
               Saiba Mais
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white/10"
+              className="text-lg px-8 py-6 border-2 border-gray-800 text-gray-800 hover:bg-gray-800/10"
               onClick={() => setIsContactOpen(true)}
             >
               Entre em Contato
