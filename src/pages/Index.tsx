@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Phone, MapPin, Info, Database, Users, MessageSquare } from "lucide-react";
+import { Phone, MapPin, Info, Database, Leaf, Globe, Users, MessageSquare } from "lucide-react";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -52,7 +52,7 @@ const Index = () => {
           <p className="text-xl sm:text-2xl text-white mb-8">
             Impulsionando a eficiência e a sustentabilidade no uso da água para o setor elétrico.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Button 
               variant="secondary"
               className="text-lg px-8 py-6 bg-white text-[#8B5CF6] hover:bg-gray-100 w-64"
@@ -63,15 +63,27 @@ const Index = () => {
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-6 py-4 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300 w-64 h-auto flex flex-col items-center"
+              className="text-lg px-6 py-4 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300 w-64"
               onClick={() => setIsContactOpen(true)}
             >
-              <Database className="mb-2" />
-              <div>
-                Softwares/Recursos
-                Programas Ambientais
-                Serviços Online
-              </div>
+              <Database className="mr-2" />
+              Softwares e Recursos
+            </Button>
+            <Button 
+              variant="outline"
+              className="text-lg px-6 py-4 border-2 border-green-400 text-green-400 hover:bg-green-400/10 hover:border-green-300 hover:text-green-300 w-64"
+              onClick={() => setIsContactOpen(true)}
+            >
+              <Leaf className="mr-2" />
+              Programas Ambientais
+            </Button>
+            <Button 
+              variant="outline"
+              className="text-lg px-6 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-300 hover:text-cyan-300 w-64"
+              onClick={() => setIsContactOpen(true)}
+            >
+              <Globe className="mr-2" />
+              Serviços Online
             </Button>
             <Button 
               variant="outline"
