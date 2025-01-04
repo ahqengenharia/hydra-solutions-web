@@ -23,7 +23,7 @@ const SoftwareRecursos = () => {
 
         {/* Problema e Monitoramento */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#1F2937] mb-8">PROBLEMA</h2>
+          <h2 className="text-3xl font-bold text-[#1F2937] mb-8">O PROBLEMA QUE VAMOS RESOLVER:</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <img 
               src="/lovable-uploads/42cd7ecf-459c-457c-af0c-c7a0087afe74.png" 
@@ -31,15 +31,13 @@ const SoftwareRecursos = () => {
               className="rounded-lg shadow-lg w-full"
             />
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-[#4B5563] mb-4">Monitoramentos:</h3>
               <ul className="space-y-3 text-gray-700">
-                <li>• Pluviométrico, (precipitação)</li>
-                <li>• Fluviométrico, (níveis e vazões dos rios)</li>
-                <li>• Limnimétrico, (níveis dos reservatórios)</li>
-                <li>• Sedimentométrico, (materiais sólidos presentes na água)</li>
-                <li>• Defluência, (vazão após o turbinamento + vazão por dispositivos extravasores)</li>
-                <li>• Qualidade da água e</li>
-                <li>• Acompanhamento do assoreamento de reservatórios.</li>
+                <li>• Consistência de Dados hidrológicos por plataforma SAAS com uso de IA</li>
+                <li>• Levantamento de DADOS PARA USINAS HIDRELÉTRICAS, SANEAMENTO E CONSTRUÇÃO</li>
+                <li>• Modelagem de curva chave</li>
+                <li>• Gestão de Dados para Empreendimentos</li>
+                <li>• Gestão de Ativos</li>
+                <li>• Garantia Física</li>
               </ul>
             </div>
           </div>
