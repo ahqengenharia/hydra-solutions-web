@@ -38,23 +38,23 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center pt-32">
+      <section className="relative h-screen flex items-center justify-center pt-48">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
           style={{
             backgroundImage: `url('/lovable-uploads/64bba5c1-728c-458c-ba31-c85d5659ee4d.png')`
           }}
         />
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-16">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
             Soluções Inteligentes para Recursos Hídricos
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-white mb-8 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-white mb-6 max-w-4xl mx-auto">
             Desenvolvemos soluções inovadoras para o monitoramento e gestão de recursos hídricos, 
             integrando tecnologia de ponta com expertise ambiental para garantir a sustentabilidade 
             e eficiência no setor elétrico brasileiro.
           </p>
-          <p className="text-base sm:text-lg text-white mb-12 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-white mb-10 max-w-3xl mx-auto">
             Nossa missão é transformar a gestão de recursos hídricos através de tecnologia avançada 
             e conhecimento especializado, proporcionando soluções que garantam a sustentabilidade e 
             eficiência operacional no setor elétrico.
