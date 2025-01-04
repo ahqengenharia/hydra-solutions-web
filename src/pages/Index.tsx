@@ -49,8 +49,15 @@ const Index = () => {
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
             Soluções Inteligentes para Recursos Hídricos
           </h1>
-          <p className="text-xl sm:text-2xl text-white mb-8">
-            Impulsionando a eficiência e a sustentabilidade no uso da água para o setor elétrico.
+          <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto">
+            Desenvolvemos soluções inovadoras para o monitoramento e gestão de recursos hídricos, 
+            integrando tecnologia de ponta com expertise ambiental para garantir a sustentabilidade 
+            e eficiência no setor elétrico brasileiro.
+          </p>
+          <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
+            Nossa missão é transformar a gestão de recursos hídricos através de tecnologia avançada 
+            e conhecimento especializado, proporcionando soluções que garantam a sustentabilidade e 
+            eficiência operacional no setor elétrico.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Button 
@@ -109,7 +116,7 @@ const Index = () => {
       <section id="sobre" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Nossos Serviços
+            Nossos Serviços e Soluções
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-6 hover:shadow-lg transition-shadow">
@@ -117,15 +124,17 @@ const Index = () => {
                 Monitoramento Inteligente
               </h3>
               <p className="text-gray-600">
-                Sistemas avançados de monitoramento em tempo real para recursos hídricos
+                Sistema avançado de monitoramento em tempo real para recursos hídricos, 
+                utilizando tecnologia IoT e análise de dados para otimizar a gestão hídrica.
               </p>
             </Card>
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold text-blue-600 mb-4">
-                Gestão Sustentável
+                Gestão Ambiental
               </h3>
               <p className="text-gray-600">
-                Soluções para otimização do uso da água no setor elétrico
+                Soluções integradas para gestão ambiental, incluindo monitoramento de qualidade 
+                da água, vazão e sedimentos, com foco em sustentabilidade.
               </p>
             </Card>
             <Card className="p-6 hover:shadow-lg transition-shadow">
@@ -133,15 +142,17 @@ const Index = () => {
                 Consultoria Especializada
               </h3>
               <p className="text-gray-600">
-                Assessoria técnica para projetos hidroelétricos
+                Assessoria técnica especializada em recursos hídricos, oferecendo suporte 
+                para compliance ambiental e otimização de processos.
               </p>
             </Card>
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold text-blue-600 mb-4">
-                Treinamento Operacional
+                Soluções Tecnológicas
               </h3>
               <p className="text-gray-600">
-                Treinamentos especializados para o setor Elétrico, Saneamento e Construção
+                Desenvolvimento e implementação de sistemas personalizados para gestão 
+                de recursos hídricos, incluindo automação e análise preditiva.
               </p>
             </Card>
           </div>
