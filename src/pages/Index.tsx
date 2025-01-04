@@ -56,7 +56,7 @@ const Index = () => {
             <Button 
               variant="secondary"
               className="text-lg px-8 py-6 bg-white text-[#8B5CF6] hover:bg-gray-100 w-64"
-              onClick={() => window.location.href = '#sobre'}
+              onClick={() => navigate('/saiba-mais')}
             >
               <Info className="mr-2" />
               Saiba Mais
