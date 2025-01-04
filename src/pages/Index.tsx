@@ -62,10 +62,10 @@ const Index = () => {
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white/10"
+              className="text-lg px-8 py-6 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300"
               onClick={() => setIsContactOpen(true)}
             >
-              Entre em Contato
+              Softwares/Recursos/Programas Ambientais/Serviços Online
             </Button>
             <Button 
               variant="outline"
