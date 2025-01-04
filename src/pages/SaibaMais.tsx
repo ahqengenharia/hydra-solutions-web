@@ -27,48 +27,48 @@ const SaibaMais = () => {
               Nossa Missão
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Desenvolver e implementar soluções inovadoras para otimizar o uso de recursos hídricos no setor elétrico, promovendo a sustentabilidade e eficiência operacional.
+              A AHQ Soluções Ambientais é uma empresa especializada em consultoria ambiental, com foco em recursos hídricos e monitoramento ambiental. Nossa missão é fornecer soluções inovadoras e sustentáveis para o setor elétrico, garantindo a conformidade ambiental e a otimização dos recursos naturais.
             </p>
           </section>
 
           <section className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-semibold text-[#8B5CF6] mb-4">
-              Serviços Especializados
+              Nossos Serviços
             </h2>
             <ul className="list-disc list-inside space-y-4 text-gray-700">
-              <li>Monitoramento em tempo real de recursos hídricos</li>
-              <li>Análise e gestão de dados hidrológicos</li>
-              <li>Consultoria técnica especializada</li>
-              <li>Desenvolvimento de software personalizado</li>
-              <li>Treinamento e capacitação de equipes</li>
+              <li>Monitoramento hidrológico e sedimentométrico</li>
+              <li>Estudos de viabilidade ambiental</li>
+              <li>Licenciamento ambiental</li>
+              <li>Gestão de recursos hídricos</li>
+              <li>Desenvolvimento de sistemas de monitoramento</li>
             </ul>
           </section>
 
           <section className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-semibold text-[#8B5CF6] mb-4">
-              Benefícios
+              Diferenciais
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-medium text-[#8B5CF6] mb-2">
-                  Para o Setor Elétrico
+                  Expertise Técnica
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>Otimização da geração de energia</li>
-                  <li>Redução de custos operacionais</li>
-                  <li>Maior eficiência no uso dos recursos</li>
-                  <li>Tomada de decisão baseada em dados</li>
+                  <li>Equipe altamente qualificada</li>
+                  <li>Tecnologia de ponta</li>
+                  <li>Metodologias inovadoras</li>
+                  <li>Experiência comprovada</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-xl font-medium text-[#8B5CF6] mb-2">
-                  Para o Meio Ambiente
+                  Compromisso com Resultados
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>Uso sustentável dos recursos hídricos</li>
-                  <li>Preservação dos ecossistemas</li>
-                  <li>Redução do impacto ambiental</li>
-                  <li>Gestão responsável da água</li>
+                  <li>Atendimento personalizado</li>
+                  <li>Soluções sob medida</li>
+                  <li>Suporte contínuo</li>
+                  <li>Excelência em serviços</li>
                 </ul>
               </div>
             </div>
