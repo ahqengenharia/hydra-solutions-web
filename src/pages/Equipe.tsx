@@ -4,7 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { User, Edit } from "lucide-react";
+import { User, Edit, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface TeamMember {
   id: number;
@@ -15,6 +16,7 @@ interface TeamMember {
 }
 
 const Equipe = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
     {
@@ -86,6 +88,17 @@ const Equipe = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="absolute top-4 left-4">
+        <Button 
+          variant="outline" 
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Voltar
+        </Button>
+      </div>
+
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
           Nossa Equipe

@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Phone, MapPin } from "lucide-react";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -10,6 +11,31 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Contact Info */}
+      <div className="absolute top-4 right-4 text-sm text-gray-600 text-right">
+        <div className="flex items-center justify-end gap-2 mb-2">
+          <Phone className="h-4 w-4" />
+          <div>
+            <p>19 3278 1159</p>
+            <p>11 98616-2105</p>
+            <p>12 98826 7109</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-end gap-2">
+          <MapPin className="h-4 w-4" />
+          <p>Rua Benedito Urbano, 403<br />CEP 37502-462</p>
+        </div>
+      </div>
+
+      {/* Logo */}
+      <div className="absolute top-4 left-4">
+        <img 
+          src="/lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
+          alt="AHQ Logo" 
+          className="h-24 object-contain"
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800">
         <div 
