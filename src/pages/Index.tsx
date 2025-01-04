@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-white">
@@ -37,6 +39,13 @@ const Index = () => {
               onClick={() => setIsContactOpen(true)}
             >
               Entre em Contato
+            </Button>
+            <Button 
+              variant="outline"
+              className="text-lg px-8 py-6 border-2 border-orange-400 text-orange-400 hover:bg-orange-400/10"
+              onClick={() => navigate('/cadastro')}
+            >
+              Fale Conosco
             </Button>
           </div>
         </div>
