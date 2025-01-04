@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Info, Database, Users, MessageSquare } from "lucide-react";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -55,32 +55,38 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="secondary"
-              className="text-lg px-8 py-6 bg-white text-[#8B5CF6] hover:bg-gray-100"
+              className="text-lg px-8 py-6 bg-white text-[#8B5CF6] hover:bg-gray-100 w-64"
               onClick={() => window.location.href = '#sobre'}
             >
+              <Info className="mr-2" />
               Saiba Mais
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-6 py-4 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300"
+              className="text-lg px-6 py-4 border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 hover:border-blue-300 hover:text-blue-300 w-64 h-auto flex flex-col items-center"
               onClick={() => setIsContactOpen(true)}
             >
-              Softwares/Recursos<br />
-              Programas Ambientais<br />
-              Serviços Online
+              <Database className="mb-2" />
+              <div>
+                Softwares/Recursos
+                Programas Ambientais
+                Serviços Online
+              </div>
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-orange-400 text-orange-400 hover:bg-orange-400/10"
+              className="text-lg px-8 py-6 border-2 border-orange-400 text-orange-400 hover:bg-orange-400/10 w-64"
               onClick={() => navigate('/cadastro')}
             >
+              <MessageSquare className="mr-2" />
               Fale Conosco
             </Button>
             <Button 
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-blue-300 text-blue-300 hover:bg-blue-300/10"
+              className="text-lg px-8 py-6 border-2 border-blue-300 text-blue-300 hover:bg-blue-300/10 w-64"
               onClick={() => navigate('/equipe')}
             >
+              <Users className="mr-2" />
               Nossa Equipe
             </Button>
           </div>
