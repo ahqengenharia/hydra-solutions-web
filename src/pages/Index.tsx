@@ -91,7 +91,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             Nossos Serviços
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold text-blue-600 mb-4">
                 Monitoramento Inteligente
@@ -114,6 +114,14 @@ const Index = () => {
               </h3>
               <p className="text-gray-600">
                 Assessoria técnica para projetos hidroelétricos
+              </p>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">
+                Treinamento Operacional
+              </h3>
+              <p className="text-gray-600">
+                Treinamentos especializados para o setor Elétrico, Saneamento e Construção
               </p>
             </Card>
           </div>
