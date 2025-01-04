@@ -30,7 +30,7 @@ const Index = () => {
       {/* Logo and CNPJ */}
       <div className="absolute top-4 left-4 z-20 flex flex-col items-start">
         <img 
-          src="/lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
+          src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
           alt="AHQ Logo" 
           className="h-24 object-contain"
         />
@@ -42,7 +42,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
           style={{
-            backgroundImage: `url('/lovable-uploads/64bba5c1-728c-458c-ba31-c85d5659ee4d.png')`
+            backgroundImage: `url('lovable-uploads/64bba5c1-728c-458c-ba31-c85d5659ee4d.png')`
           }}
         />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-16">
@@ -112,7 +112,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="sobre" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
