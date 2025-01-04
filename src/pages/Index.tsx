@@ -38,7 +38,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center pt-32">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
           style={{
