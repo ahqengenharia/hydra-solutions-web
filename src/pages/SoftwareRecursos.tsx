@@ -24,20 +24,40 @@ const SoftwareRecursos = () => {
         {/* Problema e Monitoramento */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#1F2937] mb-8">O PROBLEMA QUE VAMOS RESOLVER:</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <img 
-              src="/lovable-uploads/42cd7ecf-459c-457c-af0c-c7a0087afe74.png" 
-              alt="Barragem" 
-              className="rounded-lg shadow-lg w-full"
-            />
-            <div className="space-y-4">
-              <ul className="space-y-3 text-gray-700">
-                <li>• Consistência de Dados hidrológicos por plataforma SAAS com uso de IA</li>
-                <li>• Levantamento de DADOS PARA USINAS HIDRELÉTRICAS, SANEAMENTO E CONSTRUÇÃO</li>
-                <li>• Modelagem de curva chave</li>
-                <li>• Gestão de Dados para Empreendimentos</li>
-                <li>• Gestão de Ativos</li>
-                <li>• Garantia Física</li>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="w-full">
+              <img 
+                src="/lovable-uploads/42cd7ecf-459c-457c-af0c-c7a0087afe74.png" 
+                alt="Barragem" 
+                className="rounded-xl shadow-lg w-full h-auto object-cover max-h-[500px]"
+              />
+            </div>
+            <div className="space-y-6 bg-gray-50 p-6 rounded-xl shadow-sm">
+              <ul className="space-y-4 text-gray-700 text-lg">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Consistência de Dados hidrológicos por plataforma SAAS com uso de IA</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Levantamento de DADOS PARA USINAS HIDRELÉTRICAS, SANEAMENTO E CONSTRUÇÃO</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Modelagem de curva chave</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Gestão de Dados para Empreendimentos</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Gestão de Ativos</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Garantia Física</span>
+                </li>
               </ul>
             </div>
           </div>
