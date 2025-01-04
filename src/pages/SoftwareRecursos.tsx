@@ -45,49 +45,6 @@ const SoftwareRecursos = () => {
           </div>
         </section>
 
-        {/* Atores Envolvidos */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-[#1F2937] mb-8">Os Atores Envolvidos</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-              <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
-                <h3 className="text-xl font-semibold">Empreendedores</h3>
-              </div>
-              <div className="h-64 relative">
-                <img 
-                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                  alt="Empreendedores" 
-                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
-                <h3 className="text-xl font-semibold">Órgãos Reguladores</h3>
-              </div>
-              <div className="h-64 relative">
-                <img 
-                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                  alt="Órgãos Reguladores" 
-                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
-                <h3 className="text-xl font-semibold">Sociedade</h3>
-              </div>
-              <div className="h-64 relative">
-                <img 
-                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                  alt="Sociedade" 
-                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Proposta de Valor */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-[#1F2937] mb-8">PROPOSTA DE VALOR</h2>
