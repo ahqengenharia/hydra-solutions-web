@@ -53,31 +53,37 @@ const SoftwareRecursos = () => {
               <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
                 <h3 className="text-xl font-semibold">Empreendedores</h3>
               </div>
-              <img 
-                src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                alt="Empreendedores" 
-                className="w-full h-64 object-cover rounded-b-lg shadow-lg"
-              />
+              <div className="h-64 relative">
+                <img 
+                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
+                  alt="Empreendedores" 
+                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
+                />
+              </div>
             </div>
             <div className="space-y-4">
               <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
                 <h3 className="text-xl font-semibold">Órgãos Reguladores</h3>
               </div>
-              <img 
-                src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                alt="Órgãos Reguladores" 
-                className="w-full h-64 object-cover rounded-b-lg shadow-lg"
-              />
+              <div className="h-64 relative">
+                <img 
+                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
+                  alt="Órgãos Reguladores" 
+                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
+                />
+              </div>
             </div>
             <div className="space-y-4">
               <div className="bg-red-700 text-white p-4 text-center rounded-t-lg">
                 <h3 className="text-xl font-semibold">Sociedade</h3>
               </div>
-              <img 
-                src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
-                alt="Sociedade" 
-                className="w-full h-64 object-cover rounded-b-lg shadow-lg"
-              />
+              <div className="h-64 relative">
+                <img 
+                  src="/lovable-uploads/d4835fe8-6772-4d82-8522-a515f7e784ee.png" 
+                  alt="Sociedade" 
+                  className="absolute inset-0 w-full h-full object-contain rounded-b-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
