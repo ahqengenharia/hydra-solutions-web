@@ -15,7 +15,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
           style={{
-            backgroundImage: `url('/lovable-uploads/10b03c69-008a-4680-8858-14d9c20093b2.png')`
+            backgroundImage: `url('/lovable-uploads/64bba5c1-728c-458c-ba31-c85d5659ee4d.png')`
           }}
         />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
@@ -46,6 +46,13 @@ const Index = () => {
               onClick={() => navigate('/cadastro')}
             >
               Fale Conosco
+            </Button>
+            <Button 
+              variant="outline"
+              className="text-lg px-8 py-6 border-2 border-blue-300 text-blue-300 hover:bg-blue-300/10"
+              onClick={() => navigate('/equipe')}
+            >
+              Nossa Equipe
             </Button>
           </div>
         </div>
