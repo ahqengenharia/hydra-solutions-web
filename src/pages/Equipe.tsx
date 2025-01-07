@@ -1,13 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
-import { User, Edit, ArrowLeft } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { QRCodeSVG } from "qrcode.react";
+import { TeamMemberCard } from "@/components/TeamMemberCard";
 
 interface TeamMember {
   id: number;
@@ -17,6 +14,7 @@ interface TeamMember {
   bio: string;
   image: string;
   contact: string;
+  qrCodeImage?: string;
 }
 
 const Equipe = () => {
@@ -100,6 +98,25 @@ const Equipe = () => {
     }
   };
 
+  const handleQRCodeUpload = async (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setTeamMembers(members =>
+          members.map(member =>
+            member.id === id ? { ...member, qrCodeImage: reader.result as string } : member
+          )
+        );
+        toast({
+          title: "QR Code atualizado",
+          description: "O QR Code foi atualizado com sucesso.",
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="absolute top-4 left-4">
@@ -120,124 +137,17 @@ const Equipe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map(member => (
             <Card key={member.id} className="hover:shadow-lg transition-shadow">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="relative">
-                  <Avatar className="h-20 w-20">
-                    {member.image ? (
-                      <AvatarImage src={member.image} alt={member.name} />
-                    ) : (
-                      <AvatarFallback>
-                        <User className="h-10 w-10" />
-                      </AvatarFallback>
-                    )}
-                  </Avatar>
-                  <label
-                    htmlFor={`image-${member.id}`}
-                    className="absolute bottom-0 right-0 p-1 bg-white rounded-full shadow-lg cursor-pointer"
-                  >
-                    <input
-                      type="file"
-                      id={`image-${member.id}`}
-                      className="hidden"
-                      accept="image/*"
-                      onChange={(e) => handleImageUpload(e, member.id)}
-                    />
-                    <Edit className="h-4 w-4 text-gray-500" />
-                  </label>
-                </div>
-                <div className="flex-1">
-                  {editingId === member.id && editingField === 'name' ? (
-                    <div className="space-y-2">
-                      <Input
-                        value={editText}
-                        onChange={(e) => setEditText(e.target.value)}
-                        className="font-semibold"
-                      />
-                      <Button onClick={() => handleSave(member.id, 'name')} size="sm">
-                        Salvar
-                      </Button>
-                    </div>
-                  ) : (
-                    <CardTitle 
-                      className="text-xl cursor-pointer hover:text-blue-600"
-                      onClick={() => handleEdit(member, 'name')}
-                    >
-                      {member.name}
-                    </CardTitle>
-                  )}
-                  
-                  {editingId === member.id && editingField === 'title' ? (
-                    <div className="space-y-2">
-                      <Input
-                        value={editText}
-                        onChange={(e) => setEditText(e.target.value)}
-                      />
-                      <Button onClick={() => handleSave(member.id, 'title')} size="sm">
-                        Salvar
-                      </Button>
-                    </div>
-                  ) : (
-                    <p 
-                      className="text-sm text-blue-600 cursor-pointer hover:text-blue-800"
-                      onClick={() => handleEdit(member, 'title')}
-                    >
-                      {member.title}
-                    </p>
-                  )}
-                  
-                  {editingId === member.id && editingField === 'role' ? (
-                    <div className="space-y-2">
-                      <Input
-                        value={editText}
-                        onChange={(e) => setEditText(e.target.value)}
-                      />
-                      <Button onClick={() => handleSave(member.id, 'role')} size="sm">
-                        Salvar
-                      </Button>
-                    </div>
-                  ) : (
-                    <p 
-                      className="text-sm text-gray-600 cursor-pointer hover:text-gray-800"
-                      onClick={() => handleEdit(member, 'role')}
-                    >
-                      {member.role}
-                    </p>
-                  )}
-                </div>
-              </CardHeader>
-              <CardContent>
-                {editingId === member.id && editingField === 'bio' ? (
-                  <div className="space-y-4">
-                    <Textarea
-                      value={editText}
-                      onChange={(e) => setEditText(e.target.value)}
-                      className="min-h-[100px]"
-                    />
-                    <Button onClick={() => handleSave(member.id, 'bio')} className="w-full">
-                      Salvar
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
-                    <p className="text-gray-600">{member.bio}</p>
-                    <Button
-                      variant="outline"
-                      onClick={() => handleEdit(member, 'bio')}
-                      className="w-full"
-                    >
-                      Editar Currículo
-                    </Button>
-                  </div>
-                )}
-                <div className="mt-4 flex justify-center">
-                  <QRCodeSVG
-                    value={member.contact}
-                    size={128}
-                    level="H"
-                    includeMargin={true}
-                  />
-                </div>
-              </CardContent>
+              <TeamMemberCard
+                member={member}
+                editingId={editingId}
+                editingField={editingField}
+                editText={editText}
+                onEdit={handleEdit}
+                onSave={handleSave}
+                onEditText={setEditText}
+                onImageUpload={handleImageUpload}
+                onQRCodeUpload={handleQRCodeUpload}
+              />
             </Card>
           ))}
         </div>
