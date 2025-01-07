@@ -1,18 +1,22 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { User, Edit, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { QRCodeSVG } from "qrcode.react";
 
 interface TeamMember {
   id: number;
   name: string;
+  title: string;
   role: string;
   bio: string;
   image: string;
+  contact: string;
 }
 
 const Equipe = () => {
@@ -22,58 +26,68 @@ const Equipe = () => {
     {
       id: 1,
       name: "Dr. Carlos Silva",
+      title: "Doutor em Engenharia Hidráulica",
       role: "Diretor de Engenharia Hídrica",
       bio: "Doutor em Engenharia Hidráulica com mais de 15 anos de experiência em gestão de recursos hídricos e projetos hidroelétricos.",
       image: "",
+      contact: "mailto:carlos.silva@ahqconsultoria.com.br",
     },
     {
       id: 2,
       name: "Dra. Ana Santos",
+      title: "Mestre em Gestão Ambiental",
       role: "Coordenadora de Projetos Ambientais",
       bio: "Especialista em avaliação de impacto ambiental e sustentabilidade em projetos hidroelétricos, com mestrado em Gestão Ambiental.",
       image: "",
+      contact: "mailto:ana.santos@ahqconsultoria.com.br",
     },
     {
       id: 3,
       name: "Eng. Roberto Oliveira",
+      title: "Especialista em Automação",
       role: "Especialista em Sistemas de Monitoramento",
       bio: "Engenheiro com especialização em sistemas automatizados de monitoramento e controle de barragens.",
       image: "",
+      contact: "mailto:roberto.oliveira@ahqconsultoria.com.br",
     },
     {
       id: 4,
       name: "Dra. Marina Costa",
+      title: "Doutora em Ciência de Dados",
       role: "Analista de Dados Hídricos",
       bio: "Doutora em Ciência de Dados aplicada a recursos hídricos, especialista em modelagem hidrológica e previsão de vazões.",
       image: "",
+      contact: "mailto:marina.costa@ahqconsultoria.com.br",
     },
   ]);
 
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [editingField, setEditingField] = useState<string | null>(null);
   const [editText, setEditText] = useState("");
 
-  const handleEdit = (member: TeamMember) => {
+  const handleEdit = (member: TeamMember, field: string) => {
     setEditingId(member.id);
-    setEditText(member.bio);
+    setEditingField(field);
+    setEditText(member[field as keyof TeamMember] as string);
   };
 
-  const handleSave = (id: number) => {
+  const handleSave = (id: number, field: string) => {
     setTeamMembers(members =>
       members.map(member =>
-        member.id === id ? { ...member, bio: editText } : member
+        member.id === id ? { ...member, [field]: editText } : member
       )
     );
     setEditingId(null);
+    setEditingField(null);
     toast({
-      title: "Currículo atualizado",
-      description: "As alterações foram salvas com sucesso.",
+      title: "Atualizado com sucesso",
+      description: "As alterações foram salvas.",
     });
   };
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Simulating image upload - in a real app, you'd upload to a server
       const reader = new FileReader();
       reader.onload = () => {
         setTeamMembers(members =>
@@ -131,23 +145,75 @@ const Equipe = () => {
                     <Edit className="h-4 w-4 text-gray-500" />
                   </label>
                 </div>
-                <div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <p className="text-sm text-blue-600">{member.role}</p>
+                <div className="flex-1">
+                  {editingId === member.id && editingField === 'name' ? (
+                    <div className="space-y-2">
+                      <Input
+                        value={editText}
+                        onChange={(e) => setEditText(e.target.value)}
+                        className="font-semibold"
+                      />
+                      <Button onClick={() => handleSave(member.id, 'name')} size="sm">
+                        Salvar
+                      </Button>
+                    </div>
+                  ) : (
+                    <CardTitle 
+                      className="text-xl cursor-pointer hover:text-blue-600"
+                      onClick={() => handleEdit(member, 'name')}
+                    >
+                      {member.name}
+                    </CardTitle>
+                  )}
+                  
+                  {editingId === member.id && editingField === 'title' ? (
+                    <div className="space-y-2">
+                      <Input
+                        value={editText}
+                        onChange={(e) => setEditText(e.target.value)}
+                      />
+                      <Button onClick={() => handleSave(member.id, 'title')} size="sm">
+                        Salvar
+                      </Button>
+                    </div>
+                  ) : (
+                    <p 
+                      className="text-sm text-blue-600 cursor-pointer hover:text-blue-800"
+                      onClick={() => handleEdit(member, 'title')}
+                    >
+                      {member.title}
+                    </p>
+                  )}
+                  
+                  {editingId === member.id && editingField === 'role' ? (
+                    <div className="space-y-2">
+                      <Input
+                        value={editText}
+                        onChange={(e) => setEditText(e.target.value)}
+                      />
+                      <Button onClick={() => handleSave(member.id, 'role')} size="sm">
+                        Salvar
+                      </Button>
+                    </div>
+                  ) : (
+                    <p 
+                      className="text-sm text-gray-600 cursor-pointer hover:text-gray-800"
+                      onClick={() => handleEdit(member, 'role')}
+                    >
+                      {member.role}
+                    </p>
+                  )}
                 </div>
               </CardHeader>
               <CardContent>
-                {editingId === member.id ? (
+                {editingId === member.id && editingField === 'bio' ? (
                   <div className="space-y-4">
                     <Textarea
                       value={editText}
                       onChange={(e) => setEditText(e.target.value)}
                       className="min-h-[100px]"
                     />
-                    <Button
-                      onClick={() => handleSave(member.id)}
-                      className="w-full"
-                    >
+                    <Button onClick={() => handleSave(member.id, 'bio')} className="w-full">
                       Salvar
                     </Button>
                   </div>
@@ -156,13 +222,21 @@ const Equipe = () => {
                     <p className="text-gray-600">{member.bio}</p>
                     <Button
                       variant="outline"
-                      onClick={() => handleEdit(member)}
+                      onClick={() => handleEdit(member, 'bio')}
                       className="w-full"
                     >
                       Editar Currículo
                     </Button>
                   </div>
                 )}
+                <div className="mt-4 flex justify-center">
+                  <QRCodeSVG
+                    value={member.contact}
+                    size={128}
+                    level="H"
+                    includeMargin={true}
+                  />
+                </div>
               </CardContent>
             </Card>
           ))}
