@@ -16,7 +16,6 @@ const Index = () => {
         <div className="flex items-center justify-end gap-2 mb-2">
           <Phone className="h-4 w-4" />
           <div>
-            <p>19 3278 1159</p>
             <p>11 98616-2105</p>
             <p>12 98826 7109</p>
           </div>
@@ -34,7 +33,7 @@ const Index = () => {
           alt="AHQ Logo" 
           className="h-24 object-contain"
         />
-        <p className="text-white text-sm mt-2">CNPJ: 48.776.846.0001-44</p>
+        <p className="text-white text-sm mt-2">wagnervargas@ahqconsultoriaemengenharia.com.br</p>
       </div>
 
       {/* Hero Section */}
