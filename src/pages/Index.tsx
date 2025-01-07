@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Phone, MapPin, Info, Database, Leaf, Globe, Users, MessageSquare } from "lucide-react";
+import { Phone, MapPin, Info, Database, Leaf, Globe, Users, MessageSquare, Mail } from "lucide-react";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -14,11 +14,16 @@ const Index = () => {
       {/* Contact Info */}
       <div className="absolute top-4 right-4 text-sm text-white text-right z-20">
         <div className="flex items-center justify-end gap-2 mb-2">
+          <span className="text-[#FF9933] font-semibold">Contato:</span>
           <Phone className="h-4 w-4" />
           <div>
             <p>11 98616-2105</p>
             <p>12 98826 7109</p>
           </div>
+        </div>
+        <div className="flex items-center justify-end gap-2 mb-2">
+          <Mail className="h-4 w-4" />
+          <p className="text-[#FF9933]">wagnervargas@ahqconsultoriaemengenharia.com.br</p>
         </div>
         <div className="flex items-center justify-end gap-2">
           <MapPin className="h-4 w-4" />
@@ -26,17 +31,15 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Logo and CNPJ */}
+      {/* Logo */}
       <div className="absolute top-4 left-4 z-20 flex flex-col items-start">
         <img 
           src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
           alt="AHQ Logo" 
           className="h-24 object-contain"
         />
-        <p className="text-white text-sm mt-2">wagnervargas@ahqconsultoriaemengenharia.com.br</p>
       </div>
 
-      {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center pt-48">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
