@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const SaibaMais = () => {
   const navigate = useNavigate();
+  const videoUrl = "https://drive.google.com/file/d/1B2galv6bSUhwJamfT5uRQ28Y-6U_anoE/preview";
 
   return (
     <div className="min-h-screen bg-white">
@@ -17,9 +18,19 @@ const SaibaMais = () => {
       </Button>
 
       <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <h1 className="text-4xl font-bold text-[#8B5CF6] mb-12">
+        <h1 className="text-4xl font-bold text-[#8B5CF6] mb-8">
           Quem Somos
         </h1>
+
+        {/* Video Section */}
+        <div className="w-full aspect-video mb-12 rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src={videoUrl}
+            allow="autoplay"
+            className="w-full h-full"
+            allowFullScreen
+          />
+        </div>
 
         <div className="space-y-16">
           {/* Missão, Visão e Valores */}
