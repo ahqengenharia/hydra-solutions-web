@@ -23,39 +23,43 @@ const Equipe = () => {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
     {
       id: 1,
-      name: "Dr. Carlos Silva",
-      title: "Doutor em Engenharia Hidráulica",
-      role: "Diretor de Engenharia Hídrica",
-      bio: "Doutor em Engenharia Hidráulica com mais de 15 anos de experiência em gestão de recursos hídricos e projetos hidroelétricos. Especialista em modelagem hidráulica e hidrológica, com foco em otimização de sistemas hídricos e avaliação de impactos ambientais.",
+      name: "Wagner Tristão Vargas",
+      title: "Analista Desenvolvedor de Sistemas",
+      role: "Web – C# Sql Server",
+      bio: "Analista Desenvolvedor de Sistemas especializado em desenvolvimento Web com C# e SQL Server.",
       image: "",
-      contact: "carlos.silva@ahqconsultoria.com.br",
+      contact: "(11) 99322-2853",
+      qrCodeImage: "public/lovable-uploads/d7198491-e0bc-457b-bd1d-cc3ae4ab6733.png"
     },
     {
       id: 2,
-      name: "Dra. Ana Santos",
-      title: "Mestre em Gestão Ambiental",
-      role: "Coordenadora de Projetos Ambientais",
-      bio: "Especialista em avaliação de impacto ambiental e sustentabilidade em projetos hidroelétricos, com mestrado em Gestão Ambiental. Possui vasta experiência em licenciamento ambiental e desenvolvimento de programas de monitoramento ambiental.",
+      name: "Luís Gustavo Alves de Lima",
+      title: "Engenheiro Ambiental",
+      role: "Cofundador da AHQ ENGENHARIA LTDA",
+      bio: "Engenheiro Ambiental formado pela UNIFEI (2007). Cofundador da AHQ ENGENHARIA LTDA. MBA em gestão de projetos e saneamento ambiental. linkedin.com/in/luis-gustavo-lima-92491133",
       image: "",
-      contact: "ana.santos@ahqconsultoria.com.br",
+      contact: "(12) 98826-7109",
+      qrCodeImage: "public/lovable-uploads/d7198491-e0bc-457b-bd1d-cc3ae4ab6733.png"
     },
     {
       id: 3,
-      name: "Eng. Roberto Oliveira",
-      title: "Especialista em Automação",
-      role: "Especialista em Sistemas de Monitoramento",
-      bio: "Engenheiro com especialização em sistemas automatizados de monitoramento e controle de barragens. Experiência em implementação de sistemas SCADA e desenvolvimento de soluções para monitoramento em tempo real.",
+      name: "Kauan Casemiro",
+      title: "Tecnologia em Análise e Desenvolvimento de Sistemas",
+      role: "Cursando Anhanguera (2021)",
+      bio: "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas pela Anhanguera (2021)",
       image: "",
-      contact: "roberto.oliveira@ahqconsultoria.com.br",
+      contact: "(11) 91702-7356",
+      qrCodeImage: "public/lovable-uploads/d7198491-e0bc-457b-bd1d-cc3ae4ab6733.png"
     },
     {
       id: 4,
-      name: "Dra. Marina Costa",
-      title: "Doutora em Ciência de Dados",
-      role: "Analista de Dados Hídricos",
-      bio: "Doutora em Ciência de Dados aplicada a recursos hídricos, especialista em modelagem hidrológica e previsão de vazões. Desenvolve análises avançadas utilizando machine learning para otimização de recursos hídricos.",
+      name: "Fabiano Alves de Lima",
+      title: "Engenheiro Hídrico",
+      role: "Fundador da AHQ ENGENHARIA LTDA",
+      bio: "Engenheiro Hídrico formado pela UNIFEI (2007). Fundador da AHQ ENGENHARIA LTDA. Especializado em recursos hídricos voltados para o setor elétrico. linkedin.com/in/fabiano-alves-de-lima-23432435",
       image: "",
-      contact: "marina.costa@ahqconsultoria.com.br",
+      contact: "(11) 98616-2105",
+      qrCodeImage: "public/lovable-uploads/1d7a5993-7c58-4419-aa21-4c051815293d.png"
     },
   ]);
 
