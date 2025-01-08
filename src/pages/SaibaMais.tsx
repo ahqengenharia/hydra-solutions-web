@@ -22,14 +22,16 @@ const SaibaMais = () => {
           Quem Somos
         </h1>
 
-        {/* Video Section */}
-        <div className="w-full aspect-video mb-12 rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src={videoUrl}
-            allow="autoplay"
-            className="w-full h-full"
-            allowFullScreen
-          />
+        {/* Video Section - Adjusted size */}
+        <div className="w-full max-w-4xl mx-auto mb-12">
+          <div className="relative pt-[56.25%]">
+            <iframe
+              src={videoUrl}
+              allow="autoplay"
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+              allowFullScreen
+            />
+          </div>
         </div>
 
         <div className="space-y-16">
