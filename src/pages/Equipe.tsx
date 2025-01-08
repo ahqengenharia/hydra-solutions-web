@@ -27,9 +27,9 @@ const Equipe = () => {
       title: "Analista Desenvolvedor de Sistemas",
       role: "Web – C# Sql Server",
       bio: "Analista Desenvolvedor de Sistemas especializado em desenvolvimento Web com C# e SQL Server.",
-      image: "public/lovable-uploads/979cbb10-ddb9-4165-a9cf-4ac7bd86e394.png",
+      image: "/lovable-uploads/979cbb10-ddb9-4165-a9cf-4ac7bd86e394.png",
       contact: "(11) 99322-2853",
-      qrCodeImage: "public/lovable-uploads/96dea9b3-b51f-4ecd-9237-b89dd197e68f.png"
+      qrCodeImage: "/lovable-uploads/96dea9b3-b51f-4ecd-9237-b89dd197e68f.png"
     },
     {
       id: 2,
@@ -37,9 +37,9 @@ const Equipe = () => {
       title: "Engenheiro Ambiental",
       role: "Cofundador da AHQ ENGENHARIA LTDA",
       bio: "Engenheiro Ambiental formado pela UNIFEI (2007). Cofundador da AHQ ENGENHARIA LTDA. MBA em gestão de projetos e saneamento ambiental. linkedin.com/in/luis-gustavo-lima-92491133",
-      image: "public/lovable-uploads/2dab84c5-2c95-44e2-968d-e36452183cbc.png",
+      image: "/lovable-uploads/2dab84c5-2c95-44e2-968d-e36452183cbc.png",
       contact: "(12) 98826-7109",
-      qrCodeImage: "public/lovable-uploads/5b04de97-a4f9-451a-b03d-09ca4759eec9.png"
+      qrCodeImage: "/lovable-uploads/5b04de97-a4f9-451a-b03d-09ca4759eec9.png"
     },
     {
       id: 3,
@@ -47,9 +47,9 @@ const Equipe = () => {
       title: "Tecnologia em Análise e Desenvolvimento de Sistemas",
       role: "Cursando Anhanguera (2021)",
       bio: "Cursando Tecnologia em Análise e Desenvolvimento de Sistemas pela Anhanguera (2021)",
-      image: "public/lovable-uploads/676d7ff5-29b6-4d87-b508-68710d90e36d.png",
+      image: "/lovable-uploads/676d7ff5-29b6-4d87-b508-68710d90e36d.png",
       contact: "(11) 91702-7356",
-      qrCodeImage: "public/lovable-uploads/33966ab6-04cc-49af-b0b3-70e62331b4a2.png"
+      qrCodeImage: "/lovable-uploads/33966ab6-04cc-49af-b0b3-70e62331b4a2.png"
     },
     {
       id: 4,
@@ -57,9 +57,9 @@ const Equipe = () => {
       title: "Engenheiro Hídrico",
       role: "Fundador da AHQ ENGENHARIA LTDA",
       bio: "Engenheiro Hídrico formado pela UNIFEI (2007). Fundador da AHQ ENGENHARIA LTDA. Especializado em recursos hídricos voltados para o setor elétrico. linkedin.com/in/fabiano-alves-de-lima-23432435",
-      image: "public/lovable-uploads/ab6600fc-fa87-43ea-93a7-be5954410309.png",
+      image: "/lovable-uploads/ab6600fc-fa87-43ea-93a7-be5954410309.png",
       contact: "(11) 98616-2105",
-      qrCodeImage: "public/lovable-uploads/9f09d792-1ced-4efd-af4b-626c92be5ffb.png"
+      qrCodeImage: "/lovable-uploads/9f09d792-1ced-4efd-af4b-626c92be5ffb.png"
     },
   ]);
 
