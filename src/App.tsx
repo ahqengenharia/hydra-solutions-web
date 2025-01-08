@@ -8,6 +8,8 @@ import Cadastro from "./pages/Cadastro";
 import Equipe from "./pages/Equipe";
 import SaibaMais from "./pages/SaibaMais";
 import SoftwareRecursos from "./pages/SoftwareRecursos";
+import ServicosOnline from "./pages/ServicosOnline";
+import ProgramasAmbientais from "./pages/ProgramasAmbientais";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/equipe" element={<Equipe />} />
           <Route path="/saiba-mais" element={<SaibaMais />} />
           <Route path="/software-recursos" element={<SoftwareRecursos />} />
+          <Route path="/servicos-online" element={<ServicosOnline />} />
+          <Route path="/programas-ambientais" element={<ProgramasAmbientais />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

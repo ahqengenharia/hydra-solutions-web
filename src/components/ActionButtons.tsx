@@ -30,7 +30,7 @@ export const ActionButtons = ({ onContactClick }: ActionButtonsProps) => {
       <Button 
         variant="outline"
         className="text-lg px-8 py-6 border-2 border-green-400 text-green-400 hover:bg-green-400/10 hover:border-green-300 hover:text-green-300 w-64"
-        onClick={onContactClick}
+        onClick={() => navigate('/programas-ambientais')}
       >
         <Leaf className="mr-2" />
         Programas Ambientais
@@ -38,7 +38,7 @@ export const ActionButtons = ({ onContactClick }: ActionButtonsProps) => {
       <Button 
         variant="outline"
         className="text-lg px-8 py-6 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-300 hover:text-cyan-300 w-64"
-        onClick={onContactClick}
+        onClick={() => navigate('/servicos-online')}
       >
         <Globe className="mr-2" />
         Serviços Online
