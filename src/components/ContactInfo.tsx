@@ -13,7 +13,7 @@ export const ContactInfo = () => {
       </div>
       <div className="flex items-center justify-end gap-2 mb-2">
         <Mail className="h-4 w-4" />
-        <p className="text-[#FF9933]">wagnervargas@ahqconsultoriaemengenharia.com.br</p>
+        <p className="text-[#FF9933]">contato@ahqconsultoriaemengenharia.com.br</p>
       </div>
       <div className="flex items-center justify-end gap-2">
         <MapPin className="h-4 w-4" />
