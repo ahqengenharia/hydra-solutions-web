@@ -36,13 +36,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#8B5CF6] relative">
       <div className="pt-4">
-        {/* Logo with reduced size */}
+        {/* Logo with reduced background transparency */}
         <div className="absolute top-4 left-4 z-20">
-          <div className="bg-white/95 p-3 rounded-lg shadow-lg">
+          <div className="bg-white/98 p-2 rounded-lg shadow-sm">
             <img 
               src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
               alt="AHQ Logo" 
-              className="h-24 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </div>
         </div>
