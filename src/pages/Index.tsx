@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ContactInfo } from "@/components/ContactInfo";
 import { ActionButtons } from "@/components/ActionButtons";
@@ -36,11 +37,11 @@ const Index = () => {
     <div className="min-h-screen bg-[#8B5CF6] relative">
       <div className="pt-4">
         <div className="absolute top-4 left-4 z-20">
-          <div className="bg-white/98 p-1 rounded-lg shadow-sm">
+          <div className="bg-white/98 p-2 rounded-lg shadow-sm">
             <img 
               src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
               alt="AHQ Logo" 
-              className="h-[19.2px] w-auto object-contain"
+              className="h-[44px] w-auto object-contain"
             />
           </div>
         </div>
@@ -143,3 +144,4 @@ const Index = () => {
 };
 
 export default Index;
+
