@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ContactInfo } from "@/components/ContactInfo";
 import { ActionButtons } from "@/components/ActionButtons";
@@ -36,13 +35,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#8B5CF6] relative">
       <div className="pt-4">
-        {/* Logo with reduced background transparency */}
         <div className="absolute top-4 left-4 z-20">
-          <div className="bg-white/98 p-2 rounded-lg shadow-sm">
+          <div className="bg-white/98 p-1 rounded-lg shadow-sm">
             <img 
               src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
               alt="AHQ Logo" 
-              className="h-16 w-auto object-contain"
+              className="h-[19.2px] w-auto object-contain"
             />
           </div>
         </div>
@@ -77,10 +75,8 @@ const Index = () => {
         <ServicesSection />
         <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
 
-        {/* Footer with Site Map, Clock and Counter */}
         <footer className="bg-white/90 p-4 mt-8">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            {/* Site Map */}
             <div className="w-full md:w-auto">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -131,7 +127,6 @@ const Index = () => {
               </NavigationMenu>
             </div>
 
-            {/* Clock and Visit Counter */}
             <div className="flex flex-col md:flex-row items-center gap-4">
               <div className="text-xl font-mono text-violet-800">
                 {format(currentTime, 'dd/MM/yyyy HH:mm:ss')}
