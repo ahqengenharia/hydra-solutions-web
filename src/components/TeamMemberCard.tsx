@@ -2,6 +2,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { User } from "lucide-react";
+import { Dispatch, SetStateAction, ChangeEvent } from "react";
 
 interface TeamMember {
   id: number;
@@ -16,6 +17,14 @@ interface TeamMember {
 
 interface TeamMemberCardProps {
   member: TeamMember;
+  editingId?: number | null;
+  editingField?: string | null;
+  editText?: string;
+  onEdit?: (member: TeamMember, field: string) => void;
+  onSave?: (id: number, field: string) => void;
+  onEditText?: Dispatch<SetStateAction<string>>;
+  onImageUpload?: (e: ChangeEvent<HTMLInputElement>, id: number) => Promise<void>;
+  onQRCodeUpload?: (e: ChangeEvent<HTMLInputElement>, id: number) => Promise<void>;
 }
 
 export const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
