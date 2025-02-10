@@ -22,12 +22,10 @@ const Index = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Update clock every second
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
 
-    // Increment visit counter
     const currentCount = parseInt(localStorage.getItem('visitCount') || '0');
     setVisitCount(currentCount + 1);
     localStorage.setItem('visitCount', (currentCount + 1).toString());
@@ -36,94 +34,29 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#8B5CF6]">
-      {/* Header with Clock and Visit Counter */}
-      <div className="fixed top-0 left-0 right-0 bg-white/90 p-4 flex justify-between items-center z-30 shadow-lg">
-        <div className="flex items-center space-x-8">
-          {/* Site Map Navigation */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Mapa do Site</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid gap-3 p-4 w-[400px]">
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/')}
-                    >
-                      Início
-                    </NavigationMenuLink>
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/saiba-mais')}
-                    >
-                      Saiba Mais
-                    </NavigationMenuLink>
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/software-recursos')}
-                    >
-                      Softwares e Recursos
-                    </NavigationMenuLink>
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/programas-ambientais')}
-                    >
-                      Programas Ambientais
-                    </NavigationMenuLink>
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/servicos-online')}
-                    >
-                      Serviços Online
-                    </NavigationMenuLink>
-                    <NavigationMenuLink 
-                      className="cursor-pointer hover:bg-violet-100 p-2 rounded"
-                      onClick={() => navigate('/equipe')}
-                    >
-                      Nossa Equipe
-                    </NavigationMenuLink>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-
-        {/* Clock and Visit Counter */}
-        <div className="flex items-center space-x-8">
-          <div className="text-xl font-mono text-violet-800">
-            {format(currentTime, 'dd/MM/yyyy HH:mm:ss')}
-          </div>
-          <div className="text-sm text-violet-600">
-            Visitas: {visitCount}
-          </div>
-        </div>
-      </div>
-
-      {/* Add padding to account for fixed header */}
-      <div className="pt-20">
-        <ContactInfo />
-
-        {/* Logo with improved visibility */}
-        <div className="absolute top-24 left-4 z-20 flex flex-col items-start">
-          <div className="bg-white/95 p-6 rounded-lg shadow-lg">
+    <div className="min-h-screen bg-[#8B5CF6] relative">
+      <div className="pt-4">
+        {/* Logo with reduced size */}
+        <div className="absolute top-4 left-4 z-20">
+          <div className="bg-white/95 p-3 rounded-lg shadow-lg">
             <img 
               src="lovable-uploads/56035934-50f1-4d36-a35b-b949c705bbdc.png" 
               alt="AHQ Logo" 
-              className="h-40 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
         </div>
 
-        <section className="relative h-screen flex items-center justify-center pt-48">
+        <ContactInfo />
+
+        <section className="relative h-screen flex items-center justify-center">
           <div 
             className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
             style={{
               backgroundImage: `url('lovable-uploads/64bba5c1-728c-458c-ba31-c85d5659ee4d.png')`
             }}
           />
-          <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-16">
+          <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-32">
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
               Soluções Inteligentes para Recursos Hídricos
             </h1>
@@ -143,10 +76,75 @@ const Index = () => {
 
         <ServicesSection />
         <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
+
+        {/* Footer with Site Map, Clock and Counter */}
+        <footer className="bg-white/90 p-4 mt-8">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Site Map */}
+            <div className="w-full md:w-auto">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Mapa do Site</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid gap-3 p-4 w-[400px]">
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/')}
+                        >
+                          Início
+                        </NavigationMenuLink>
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/saiba-mais')}
+                        >
+                          Saiba Mais
+                        </NavigationMenuLink>
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/software-recursos')}
+                        >
+                          Softwares e Recursos
+                        </NavigationMenuLink>
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/programas-ambientais')}
+                        >
+                          Programas Ambientais
+                        </NavigationMenuLink>
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/servicos-online')}
+                        >
+                          Serviços Online
+                        </NavigationMenuLink>
+                        <NavigationMenuLink 
+                          className="cursor-pointer hover:bg-violet-100 p-2 rounded"
+                          onClick={() => navigate('/equipe')}
+                        >
+                          Nossa Equipe
+                        </NavigationMenuLink>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            {/* Clock and Visit Counter */}
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <div className="text-xl font-mono text-violet-800">
+                {format(currentTime, 'dd/MM/yyyy HH:mm:ss')}
+              </div>
+              <div className="text-sm text-violet-600">
+                Visitas: {visitCount}
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
 };
 
 export default Index;
-
