@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Phone, Info, Database, Leaf, Globe, Users, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +30,7 @@ export const ActionButtons = ({ onContactClick }: ActionButtonsProps) => {
           <div className="relative pt-[56.25%] w-full">
             <iframe 
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/JhNzQZVp_lQ?si=Kfx8UocB06ruHagw&controls=0" 
+              src="https://drive.google.com/file/d/1_Y7_oN7Je0rEUAjv4W89gwoclOvZP4zZ/preview" 
               title="YouTube video player" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
